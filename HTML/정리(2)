@@ -32,3 +32,47 @@ href="tel:연락처"
 (ex) <a href="tel:010-1234-5678" target="_self">컨텐츠</a>
 href="mailto:123@gmail.com"
 (ex) <a href="mailto:123@gmail.com" target="_self">컨텐츠</a>
+
+목록 표시 : ul / ol
+순서 없는 목록 : <ul></ul>
+순서 있는 목록 : <ol></ol>
+
+입력 요소 : input
+사용자로부터 값을 입력받을 수 있는 대화형 컨트롤 (필드) 표시
+인라인 요소이며 단일 태그
+(ex) <input />
+
+입력 요소의 식별자 지정 : name
+input 태그에 name 식별자를 공통적으로 추가할 수 있음
+각각 입력 항목에 대한 이름
+(ex) <input type="text" name="name" />
+
+입력 요소의 속성 : type
+input 태그의 속성은 20여 가지 종류, 기본값은 text로 되어 있음
+type 값이 달라짐에 따라 적용할 수 있는 추가 속성 종류도 다름
+https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input
+
+선택 메뉴 : select
+다수의 옵션(선택지)을 포함할 수 있는 선택 메뉴
+메뉴 안에 포함되는 옵션은 option 태그를 사용해 표시
+(ex) <select><option>A</option><option>B</option></select>
+
+선택 메뉴의 식별자 지정 : name
+입력 요소와 동일하게 name을 지정 가능
+value는 실제로 처리될 값으로 각각의 option에 value 속성 지정 가능
+(ex) <select name="Eng"><option value="AA">A</option><option value="BB">B</option></select>
+
+일반 텍스트 입력 요소 : textarea
+여러 줄의 일반 텍스트를 입력할 수 있는 입력 요소
+input은 한 줄만 작성할 수 있지만 textarea에는 여러줄 작성 가능 (스크롤 생성됨)
+입력 요소와 동일하게 name을 지정 가능
+(ex) <textarea name="A"></textarea>
+
+입력 양식 생성 태그 : form
+사용자가 입력한 데이터(입력값)를 서버로 보내기 위해 사용하는 태그
+(ex) <form><input type="text"><br><input type="text"></form>
+
+폼 태그 속성
+action : 입력값을 전송할 서버의 URL 
+method : 클라이언트가 입력한 데이터를 어떤 식으로 전송할지 (GET/POST 등)
+(ex) <form action="example.php" method="POST"></form>
