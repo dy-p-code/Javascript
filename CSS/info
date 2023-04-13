@@ -41,3 +41,65 @@ HTML에 CSS 더하는 방법
 선택자의 특징
 선택자가 겹치는 경우 나중에 작성된 스타일이 적용
 선택자가 다르지만 요소가 겹치는 경우 선택자 우선 순위에 의해 스타일 적용 (아이디>클래스>태그)
+
+텍스트 속성
+font-family : 글꼴 정의
+(ex) *{font-family:Times, monospace, serif} / times를 우선적으로 사용하여 없을 경우 순차 적용
+font-size : 글자 크기 정의, 
+- px : 픽셀, 크기가 고정된 절대 단위
+- rem : html 태그 폰트 사이즈에 대응하는 상대적 크기 (브라우저의 기본 글자 크기가 1 rem 기준)
+- em : 부모 태그 폰트 사이즈에 대응하는 상대적 크기
+(ex) span{font-size: 16px}
+font-weight : 글자 굵기 정의, 100-900까지 가능 
+(ex) p{font-weight: 400} / 400 (normal) / 700 (bold)
+text-align : 정렬 방식 정의, left, right, center, justify(양끝정렬)
+(ex) p{text-align: center}
+color : 글자 색상 정의, RGB함수, 색상코드, 키워드 사용 가능
+(ex) p{color:red} / p{color: #FF000} / p{color: rgb(100, 0, 
+text-decoration : 밑줄, 가로줄
+letter-spacing : 자간
+line-height : 행간
+
+인라인 요소 / 블록 레벨 요소
+인라인 요소 : 자기에게 필요한 만큼의 공간만 차지 (span, a 등)
+블록 레벨 요소 : 자기가 속한 영역의 너비를 모두 차지하여 블록 형성 (div, p, h1 등)
+
+디스플레이 속성 : display
+요소를 블록과 인라인 요소 중 어느 쪽으로 처리할지 정의
+(ex) div{display: inline} / 블록 레벨 요소인 div를 인라인으로 처리하도록 정의
+(ex) a{display:block} / 인라인 요소인 a를 블록 레벨 요소로 처리하도록 정의
+
+볼더 속성 : border
+요소가 차지하고 있는 영역에 테두리 그리는 것
+속성값으로 테두리 두께, 모양, 크기 등 지정 가능 (단축속성)
+(ex) span{border: 2px solid green} / 두께가 2px인 직선 모양의 초록색 테두리
+
+레이아웃 - 박스모델
+브라우저가 요소를 렌더링할 때 각각의 요소는 기본적으로 사각형 형태로 영역을 차지하며 이 영역을 박스라 함
+CSS는 박스의 크기, 위치, 속성(색, 배경, 테두리 모양 등)을 결정할 수 있음
+- 컨텐츠 영역 : width, height
+- 안쪽 여백 : padding
+- 경계선(테두리) : margin
+- 바깥쪽 여백으로 구성된 영역 : border-width
+
+박스모델 : padding/margin
+테두리(border)의 안쪽은 padding 바깥쪽은 margin
+- padding-top, padding-bottom, padding-left, padding-right
+- margin-top, margin-bottom, margin-left, margin-right
+(ex) div{padding-top: 30px}
+(ex) div{border: 5px slod red; margin: 10px}
+
+박스모델 : box-sizing
+박스 사이즈 속성은 요소의 너비(width)와 높이(height)를 계산하는 방법을 지정
+너비와 높이가 같더라도 box-sizing 속성값에 따라 크기가 달라질 수 있음
+- content-box : 기본값으로 너비와 높이가 콘텐츠 영역만을 포함
+- border-box : 너비와 높이가 안쪽 여백과 테두리까지 포함
+
+배경 : background
+단축 속성으로써 색상, 이미지, 반복 등 다양한 하위 속성 정의 가능
+- background-color : 배경 색 정의
+- background-image : 배경 이미지를 정의
+- background-position : 배경 이미지의 초기 위치 정의
+- background-size : 배경 이미지의 크기 정의
+- background-repeat : 배경 이미지의 반복 방법을 정의
+
